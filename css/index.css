@@ -144,6 +144,12 @@ img {
   width: 1200px;
   margin: 0 auto;
 }
+@media (max-width: 500px) {
+  .container {
+    max-width: 500px;
+    width: 100%;
+  }
+}
 p {
   font-size: 1.6rem;
 }
@@ -166,9 +172,28 @@ header nav a {
   color: #000080;
   font-size: 1.8rem;
   opacity: 0.6;
+  margin: 1%;
 }
 header nav a:hover {
   opacity: 1;
+}
+@media (max-width: 500px) {
+  header {
+    justify-content: center;
+  }
+  header nav {
+    width: 100%;
+    flex-direction: column;
+  }
+  header nav a {
+    opacity: 1;
+    border-radius: 20px;
+    background: black;
+    padding: 25px;
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+  }
 }
 .top-content {
   width: 100%;
@@ -176,7 +201,7 @@ header nav a:hover {
   line-height: 1.5;
   padding: 5% 1%;
 }
-.top-content .my-img {
+.top-content img {
   width: 50%;
   height: auto;
 }
@@ -190,6 +215,15 @@ header nav a:hover {
   font-size: 2rem;
   color: white;
   margin-top: 15px;
+}
+@media (max-width: 500px) {
+  .top-content button {
+    width: 100%;
+  }
+  .top-content img {
+    width: 100%;
+    height: auto;
+  }
 }
 .bottom-content {
   width: 100%;
@@ -254,6 +288,21 @@ header nav a:hover {
 .bottom-content h2 {
   font-size: 3rem;
   width: 100%;
+}
+@media (max-width: 500px) {
+  .bottom-content {
+    flex-flow: column nowrap;
+  }
+  .bottom-content .listen-up,
+  .bottom-content .stuff-good-at {
+    width: 100%;
+    height: auto;
+  }
+  .bottom-content .stuff-good-at,
+  .bottom-content .work-history,
+  .bottom-content .listen-up h2 {
+    text-align: center;
+  }
 }
 footer {
   height: auto;
