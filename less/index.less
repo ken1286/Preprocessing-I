@@ -66,6 +66,7 @@ img {
 // Variables
 @link-color: #000080;
 @background-color: #C0C0C0;
+@border-color: gray;
 
 // Mixins
 .button-template() {
@@ -74,6 +75,11 @@ img {
 	padding: 25px;
 	font-size: 2rem;
 	color: white;
+}
+
+.flex-column() {
+	display: flex;
+	flex-direction: column;
 }
 
 .container {
@@ -133,6 +139,7 @@ header {
 		.button-template;
 		margin-top: 15px;
 	}
+
 }
 
 .bottom-content {
@@ -147,17 +154,21 @@ header {
 
 	.listen-up {
 		width: 47.5%;
+
+		p {
+			padding: 2% 0;
+		}
 	}
 
 	.stuff-good-at {
 		width: 47.5%;
 
 		.stuff-list {
-			border: 1px solid gray;
+			border: 1px solid @border-color;
 
 			li {
 				font-size: 1.6rem;
-				border-bottom: 1px solid gray;
+				border-bottom: 1px solid @border-color;
 				padding: 3%;
 			}
 
@@ -167,11 +178,51 @@ header {
 		}
 	}
 
-	h2 {
-		font-size: 3rem;
+	.work-history {
+		width: 100%;
+		height: auto;
+
+		.work-table {
+			display: flex;
+			flex-wrap: wrap;
+		}
+		
+		.work {
+			.flex-column;
+			justify-content: space-evenly;
+			width: 25%;
+			border: 1px solid @border-color;
+			text-align: center;
+		}
+
+		p {
+			border-top: 1px solid @border-color;
+			padding: 5%;
+		}
+
+		h4 {
+			font-size: 1.6rem;
+			font-weight: bold;
+			padding: 5%;
+		}
+
+		h5 {
+			font-size: 1.8rem;
+			font-weight: bold;
+			border-top: 1px solid @border-color;
+			padding: 5%;
+		}
 	}
 
-	p {
-		padding: 2% 0;
+	h2 {
+		font-size: 3rem;
+		width: 100%;
 	}
+}
+
+footer {
+	height: auto;
+	background: @background-color;
+	text-align: center;
+	padding: 2%;
 }

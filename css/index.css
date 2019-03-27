@@ -203,6 +203,9 @@ header nav a:hover {
 .bottom-content .listen-up {
   width: 47.5%;
 }
+.bottom-content .listen-up p {
+  padding: 2% 0;
+}
 .bottom-content .stuff-good-at {
   width: 47.5%;
 }
@@ -217,9 +220,44 @@ header nav a:hover {
 .bottom-content .stuff-good-at .stuff-list li:last-child {
   border: none;
 }
+.bottom-content .work-history {
+  width: 100%;
+  height: auto;
+}
+.bottom-content .work-history .work-table {
+  display: flex;
+  flex-wrap: wrap;
+}
+.bottom-content .work-history .work {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 25%;
+  border: 1px solid gray;
+  text-align: center;
+}
+.bottom-content .work-history p {
+  border-top: 1px solid gray;
+  padding: 5%;
+}
+.bottom-content .work-history h4 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  padding: 5%;
+}
+.bottom-content .work-history h5 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  border-top: 1px solid gray;
+  padding: 5%;
+}
 .bottom-content h2 {
   font-size: 3rem;
+  width: 100%;
 }
-.bottom-content p {
-  padding: 2% 0;
+footer {
+  height: auto;
+  background: #C0C0C0;
+  text-align: center;
+  padding: 2%;
 }
